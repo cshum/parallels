@@ -1,6 +1,6 @@
 # callback-all
 
-Aggregate all callback sequence into one array result.
+Aggregate several callbacks into one array result. Like Promise.all for callbacks.
 
 [![Build Status](https://travis-ci.org/cshum/callback-all.svg?branch=master)](https://travis-ci.org/cshum/callback-all)
 
