@@ -1,6 +1,6 @@
 # callback-all
 
-Aggregate callbacks all into an array sequence.
+Aggregate all callback sequence into one array result.
 
 [![Build Status](https://travis-ci.org/cshum/callback-all.svg?branch=master)](https://travis-ci.org/cshum/callback-all)
 
