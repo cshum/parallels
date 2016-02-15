@@ -1,0 +1,18 @@
+{
+  "name": "callback-all",
+  "version": "1.0.0",
+  "description": "Promise.all for callbacks",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cshum/callback-all.git"
+  },
+  "author": "Adrian C Shum <adrian@cshum.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^6.0.4",
+    "tape": "^3.0.2"
+  }
+}
