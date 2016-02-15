@@ -11,7 +11,7 @@ function cbErr (timeout, err, cb) {
 test('callback all', function (t) {
   t.plan(2)
   var next = cbAll()
-  cbRes(200, 1, next())
+  cbRes(20, 1, next())
   cbRes(10, 2, next())
   cbRes(30, 3, next())
   cbRes(0, 4, next())

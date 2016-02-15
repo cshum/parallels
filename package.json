@@ -1,7 +1,7 @@
 {
   "name": "callback-all",
   "version": "1.0.0",
-  "description": "Promise.all for callbacks",
+  "description": "Aggregate multiple callbacks.",
   "scripts": {
     "test": "standard && node test.js"
   },
