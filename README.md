@@ -32,17 +32,16 @@ all(function (err, result) {
 var caco = require('caco')
 var callbacks = require('callback-all')
 
-
 caco(function * (next) {
+  var all = callbacks()
+
   asyncFn1(all()) // foo
   asyncFn2(all()) // bar
   asyncFn3(all()) // hello
   asyncFn4(all()) // world
 
   var result = yield all(next)
-
   console.log(result) // ['foo', 'bar', 'hello', 'world']
-
 })(function (err) {
  // handle thrown error
 })
