@@ -9,9 +9,9 @@ npm install callback-all
 ```
 
 ```js
-var callbacks = require('callback-all')
+var cball = require('callback-all')
 
-var all = callbacks()
+var all = cball()
 
 asyncFn1(all()) // foo
 asyncFn2(all()) // bar
@@ -26,24 +26,6 @@ all(function (err, result) {
 
 ```
 
-`yield` parallel callbacks in [caco](https://github.com/cshum/caco):
+## License
 
-```js
-var caco = require('caco')
-var callbacks = require('callback-all')
-
-caco(function * (next) {
-  var all = callbacks()
-
-  asyncFn1(all()) // foo
-  asyncFn2(all()) // bar
-  asyncFn3(all()) // hello
-  asyncFn4(all()) // world
-
-  var result = yield all(next)
-  console.log(result) // ['foo', 'bar', 'hello', 'world']
-})(function (err) {
- // handle thrown error
-})
-
-```
+MIT
