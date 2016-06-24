@@ -1,24 +1,24 @@
-# callback-all
+# parallels
 
 Aggregate several callbacks into one array result. Like Promise.all for callbacks.
 
-[![Build Status](https://travis-ci.org/cshum/callback-all.svg?branch=master)](https://travis-ci.org/cshum/callback-all)
+[![Build Status](https://travis-ci.org/cshum/parallels.svg?branch=master)](https://travis-ci.org/cshum/parallels)
 
 ```bash
-npm install callback-all
+npm install parallels
 ```
 
 ```js
-var cball = require('callback-all')
+var parallels = require('parallels')
 
-var all = cball()
+var next = parallels()
 
-asyncFn1(all()) // foo
-asyncFn2(all()) // bar
-asyncFn3(all()) // hello
-asyncFn4(all()) // world
+asyncFn1(next.push()) // foo
+asyncFn2(next.push()) // bar
+asyncFn3(next.push()) // hello
+asyncFn4(next.push()) // world
 
-all(function (err, result) {
+next.all(function (err, result) {
   // return err if any of them error
   // result array followed by all() sequence
   console.log(result) // ['foo', 'bar', 'hello', 'world']

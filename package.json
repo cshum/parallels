@@ -1,5 +1,5 @@
 {
-  "name": "callback-all",
+  "name": "parallels",
   "version": "1.0.0",
   "description": "Aggregate several callbacks into one array result. Like Promise.all for callbacks.",
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:cshum/callback-all.git"
+    "url": "git@github.com:cshum/parallels.git"
   },
   "author": "Adrian C Shum <adrian@cshum.com>",
   "license": "MIT",
