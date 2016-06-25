@@ -22,6 +22,12 @@ function Parallels () {
   this._callback = null
 }
 
+/**
+ * Returns callback function to be invoked,
+ * which pushes values to result list
+ *
+ * @returns {function} callback function
+ */
 Parallels.prototype.push = function () {
   if (this._ended) return noop
 
@@ -42,27 +48,52 @@ Parallels.prototype.push = function () {
   }
 }
 
-Parallels.prototype.all = function (cb) {
-  this._callback = cb
+/**
+ * Done when all callbacks resolved or any error
+ * returning result list in sequence or error
+ *
+ * @param {function} done - callback function
+ */
+Parallels.prototype.all = function (done) {
+  this._callback = done
   this._mode = MODE.ALL
   this._invoke()
 }
 
-Parallels.prototype.race = function (cb) {
-  this._callback = cb
+/**
+ * Done returning result or error
+ * as soon as any callback invoked
+ *
+ * @param {function} done - callback function
+ */
+Parallels.prototype.race = function (done) {
+  this._callback = done
   this._mode = MODE.RACE
   this._invoke()
 }
 
-Parallels.prototype.some = function (some, cb) {
-  this._callback = cb
-  this._some = some || this._total
+/**
+ * Done returning result list or error
+ * as soon as number of callbacks resolved reach count
+ *
+ * @param {number} count - number to be resolved
+ * @param {function} done - callback function
+ */
+Parallels.prototype.some = function (count, done) {
+  this._callback = done
+  this._some = count || this._total
   this._mode = MODE.SOME
   this._invoke()
 }
 
-Parallels.prototype.any = function (cb) {
-  this._callback = cb
+/**
+ * Done returning result or error
+ * as soon as any callback resolved
+ *
+ * @param {function} done - callback function
+ */
+Parallels.prototype.any = function (done) {
+  this._callback = done
   this._mode = MODE.ANY
   this._invoke()
 }
