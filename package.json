@@ -1,7 +1,7 @@
 {
   "name": "parallels",
   "version": "1.0.0",
-  "description": "Parallel callbacks made easy",
+  "description": "Utilities for handling parallel callbacks",
   "scripts": {
     "test": "standard && node test.js"
   },
